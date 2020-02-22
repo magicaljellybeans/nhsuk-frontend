@@ -48,11 +48,3 @@
   }
 
 }
-
-.nhsuk-back-link--top {
-  margin-top: - nhsuk-spacing(3);
-
-  @include mq($until: tablet) {
-    margin-top: - nhsuk-spacing(2);
-  }
-}
