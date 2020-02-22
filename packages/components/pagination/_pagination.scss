@@ -11,9 +11,11 @@
 
 .nhsuk-pagination {
   margin-bottom: $nhsuk-vertical-spacing-desktop;
+  margin-top: $nhsuk-vertical-spacing-desktop;
 
   @include mq($until: tablet) {
     margin-bottom: $nhsuk-vertical-spacing-mobile;
+    margin-top: $nhsuk-vertical-spacing-mobile;
   }
 }
 

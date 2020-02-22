@@ -85,6 +85,13 @@
 {% endblock %}
 
 {% block heading %}
+
+  {{ backLink({
+    "href": "#",
+    "text": "Go back",
+    "classes": "nhsuk-back-link--top"
+  }) }}
+
   <h1>Components</h1>
 
   {{ contentsList({
@@ -205,6 +212,10 @@
     "
   }) }}
 
+  <h2>Heading level two</h2>
+
+  <p>Body paragraph. The proof is in the pudding, and the pudding, in this case, is a football... Boof! Eat my goal!! The goalie has got football pie all over his shirt!</p>
+
   {{ image({
     "alt": "Picture of allergic conjunctivitis",
     "src": "https://assets.nhs.uk/prod/images/ABF9YH_GDGeL2X.2e16d0ba.fill-320x213.jpg",
@@ -216,18 +227,46 @@
     "src": "https://assets.nhs.uk/prod/images/ABF9YH_GDGeL2X.2e16d0ba.fill-320x213.jpg",
     "caption": "Itchy, red, watering eyes"
   }) }}
+
+  <p>Body paragraph. The proof is in the pudding, and the pudding, in this case, is a football... Boof! Eat my goal!! The goalie has got football pie all over his shirt!</p>
+
+  <h2>Heading level two</h2>
+
+  {{ image({
+    "alt": "Picture of allergic conjunctivitis",
+    "src": "https://assets.nhs.uk/prod/images/ABF9YH_GDGeL2X.2e16d0ba.fill-320x213.jpg",
+    "caption": "Itchy, red, watering eyes"
+  }) }}
+
+  {{ image({
+    "alt": "Picture of allergic conjunctivitis",
+    "src": "https://assets.nhs.uk/prod/images/ABF9YH_GDGeL2X.2e16d0ba.fill-320x213.jpg",
+    "caption": "Itchy, red, watering eyes"
+  }) }}
+
+  {{ image({
+    "alt": "Picture of allergic conjunctivitis",
+    "src": "https://assets.nhs.uk/prod/images/ABF9YH_GDGeL2X.2e16d0ba.fill-320x213.jpg",
+    "caption": "Itchy, red, watering eyes"
+  }) }}
+
+  <h2>Heading level two</h2>
+
+  <p>Full width image - helper class <code>nhsuk-image--full</code>.</p>
+
+  {{ image({
+    "alt": "Picture of allergic conjunctivitis",
+    "src": "https://assets.nhs.uk/prod/images/ABF9YH_GDGeL2X.2e16d0ba.fill-320x213.jpg",
+    "caption": "Itchy, red, watering eyes",
+    "classes": "nhsuk-image--full"
+  }) }}
+
+  <p>Body paragraph. The proof is in the pudding, and the pudding, in this case, is a football... Boof! Eat my goal!! The goalie has got football pie all over his shirt!</p>
 
   <h2>Heading level two</h2>
 
   <p>Body paragraph. The proof is in the pudding, and the pudding, in this case, is a football... Boof! Eat my goal!! The goalie has got football pie all over his shirt!</p>
 
-
-  {{ actionLink({
-    "text": "Find a minor injuries unit",
-    "href": "https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551"
-  }) }}
-
-  <h2>Heading level two</h2>
 
   {{ actionLink({
     "text": "Find a minor injuries unit",
@@ -369,6 +408,11 @@
       }) }}
     </div>
   </div>
+
+  <h2>Heading level two</h2>
+
+  <p>Body paragraph. The proof is in the pudding, and the pudding, in this case, is a football... Boof! Eat my goal!! The goalie has got football pie all over his shirt!</p>
+
 
   {{ pagination({
     "previousUrl": "/section/treatments",

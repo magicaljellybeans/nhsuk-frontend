@@ -35,6 +35,7 @@
 
   &:hover {
     background-color: $color_nhsuk-white;
+    box-shadow: 0 $nhsuk-box-shadow-link 0 0 $nhsuk-link-hover-color; /* [2] */
     color: $color_nhsuk-blue;
 
     .nhsuk-promo__heading {

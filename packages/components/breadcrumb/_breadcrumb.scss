@@ -83,6 +83,12 @@
     }
   }
 
+  &:focus {
+    &:hover {
+      color: $nhsuk-focus-text-color;
+    }
+  }
+
 }
 
 .nhsuk-breadcrumb__back {

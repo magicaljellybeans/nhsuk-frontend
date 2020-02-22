@@ -104,15 +104,15 @@
 
 .nhsuk-expander {
   background-color: $color_nhsuk-white;
+  border-bottom: 1px solid $nhsuk-border-color;
 
   .nhsuk-details__summary {
     background-color: $color_nhsuk-white;
-    border-top: $nhsuk-focus-width solid transparent;
     display: block;
-    padding: nhsuk-spacing(4) - $nhsuk-focus-width nhsuk-spacing(4) nhsuk-spacing(4);
+    padding: 20px nhsuk-spacing(4);
 
     @include mq($until: tablet) {
-      padding: nhsuk-spacing(3) - $nhsuk-focus-width nhsuk-spacing(3) nhsuk-spacing(3);
+      padding: 12px nhsuk-spacing(3);
     }
 
     &:before {
@@ -122,6 +122,7 @@
     &:hover {
       .nhsuk-details__summary-text {
         color: $nhsuk-link-hover-color;
+        text-decoration: underline;
       }
     }
 
@@ -144,8 +145,15 @@
     color: $color_nhsuk-blue;
     cursor: pointer;
     display: inline-block;
-    padding: nhsuk-spacing(2) nhsuk-spacing(2) nhsuk-spacing(2) 38px;
+    font-weight: $nhsuk-font-bold;
+    line-height: 1.47;
+    padding: nhsuk-spacing(1) nhsuk-spacing(2) nhsuk-spacing(1) 38px;
     position: relative;
+    text-decoration: none;
+
+    @include mq($until: tablet) {
+      line-height: 1.25;
+    }
   }
 
   .nhsuk-details__text {
@@ -178,6 +186,7 @@
         }
       }
     }
+
   }
 
   .nhsuk-details__summary-text {
@@ -190,7 +199,6 @@
 .nhsuk-expander-group { /* [4] */
 
   > .nhsuk-details {
-    border-bottom: 1px solid $nhsuk-border-color;
     margin-bottom: 0;
   }
 

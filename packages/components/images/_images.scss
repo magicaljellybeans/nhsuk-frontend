@@ -14,9 +14,11 @@
   border-bottom: 1px solid $color_nhsuk-grey-4;
 
   margin-bottom: $nhsuk-vertical-spacing-desktop;
+  margin-top: $nhsuk-vertical-spacing-desktop;
 
   @include mq($until: tablet) {
     margin-bottom: $nhsuk-vertical-spacing-mobile;
+    margin-top: $nhsuk-vertical-spacing-mobile;
   }
 
   margin-left: 0; /* [1] */
@@ -31,7 +33,11 @@
   }
 
   & + .nhsuk-image {
-    margin-top: 0; /* [4] */
+    margin-top: - nhsuk-spacing(2); /* [4] */
+
+    @include mq($from: desktop) {
+      margin-top: - nhsuk-spacing(3); /* [4] */
+    }
   }
 
 }
@@ -45,4 +51,8 @@
   @include nhsuk-typography-responsive(16);
 
   padding: nhsuk-spacing(3);
+}
+
+.nhsuk-image--full {
+  width: 100%;
 }
