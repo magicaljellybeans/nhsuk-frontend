@@ -9,9 +9,13 @@
  */
 
 table {
-  @include nhsuk-responsive-margin(7, 'bottom');
-
   border-spacing: 0;
+  margin-bottom: $nhsuk-vertical-spacing-desktop;
+
+  @include mq($until: tablet) {
+    margin-bottom: $nhsuk-vertical-spacing-mobile;
+  }
+
   vertical-align: top;
   width: 100%; /* [1] */
 

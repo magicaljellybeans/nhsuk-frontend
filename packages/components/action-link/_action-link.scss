@@ -14,7 +14,11 @@
  */
 
 .nhsuk-action-link {
-  @include nhsuk-responsive-margin(6, 'bottom');
+  margin-bottom: $nhsuk-vertical-spacing-desktop;
+
+  @include mq($until: tablet) {
+    margin-bottom: $nhsuk-vertical-spacing-mobile;
+  }
 }
 
 .nhsuk-action-link__link {

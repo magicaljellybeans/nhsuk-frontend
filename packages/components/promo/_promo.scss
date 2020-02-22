@@ -15,7 +15,12 @@
  */
 
 .nhsuk-promo {
-  margin-bottom: nhsuk-spacing(5) + $nhsuk-box-shadow-link; /* [1] */
+  margin-bottom: $nhsuk-vertical-spacing-desktop + $nhsuk-box-shadow-link; /* [1] */
+
+  @include mq($until: tablet) {
+    margin-bottom: $nhsuk-vertical-spacing-mobile + $nhsuk-box-shadow-link;
+  }
+
   width: 100%;
 }
 
@@ -127,7 +132,7 @@
   margin-bottom: nhsuk-spacing(5) + $nhsuk-box-shadow-link;
 
   @include mq($until: desktop) {
-    margin-bottom: nhsuk-spacing(4) + $nhsuk-box-shadow-link;
+    margin-bottom: nhsuk-spacing(3) + $nhsuk-box-shadow-link;
   }
 
 }
@@ -136,7 +141,7 @@
   @include flex-item();
 
   @include mq($until: desktop) {
-    margin-bottom: nhsuk-spacing(4) + $nhsuk-box-shadow-link;
+    margin-bottom: nhsuk-spacing(3) + $nhsuk-box-shadow-link;
 
     &:last-child {
       margin-bottom: 0;

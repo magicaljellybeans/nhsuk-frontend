@@ -10,8 +10,11 @@
  */
 
 .nhsuk-pagination {
-  @include nhsuk-responsive-margin(7, 'top');
-  @include nhsuk-responsive-margin(7, 'bottom');
+  margin-bottom: $nhsuk-vertical-spacing-desktop;
+
+  @include mq($until: tablet) {
+    margin-bottom: $nhsuk-vertical-spacing-mobile;
+  }
 }
 
 

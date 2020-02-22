@@ -15,8 +15,7 @@
  */
 
 .nhsuk-list-panel {
-  @include nhsuk-responsive-margin(7, 'top');
-  @include nhsuk-responsive-margin(7, 'bottom');
+  @include nhsuk-vertical-spacing;
 
   @include mq($until: tablet) {
     @include remove-margin-mobile(); /* [8] */

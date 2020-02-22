@@ -8,7 +8,11 @@
  */
 
 .nhsuk-contents-list {
-  @include nhsuk-responsive-margin(7, 'bottom');
+  margin-bottom: $nhsuk-vertical-spacing-desktop;
+
+  @include mq($until: tablet) {
+    margin-bottom: $nhsuk-vertical-spacing-mobile;
+  }
 }
 
 .nhsuk-contents-list__list {

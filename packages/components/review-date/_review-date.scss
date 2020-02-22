@@ -3,6 +3,10 @@
    ========================================================================== */
 
 .nhsuk-review-date {
-  @include nhsuk-responsive-margin(7, 'top');
   color: $nhsuk-secondary-text-color;
+  margin-top: $nhsuk-vertical-spacing-desktop;
+
+  @include mq($until: tablet) {
+    margin-top: $nhsuk-vertical-spacing-mobile;
+  }
 }

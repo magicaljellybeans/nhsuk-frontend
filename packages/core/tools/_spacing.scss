@@ -175,3 +175,20 @@
 @mixin nhsuk-responsive-padding($responsive-spacing-point, $direction: 'all', $important: false, $adjustment: false) {
   @include _nhsuk-responsive-spacing($responsive-spacing-point, 'padding', $direction, $important, $adjustment);
 }
+
+// Vertical spacing
+// ==========================================================================
+
+//
+// Adds default margin bottom for desktop and mobile.
+//
+
+@mixin nhsuk-vertical-spacing {
+  margin-bottom: $nhsuk-vertical-spacing-desktop;
+  margin-top: $nhsuk-vertical-spacing-desktop;
+
+  @include mq($until: tablet) {
+    margin-bottom: $nhsuk-vertical-spacing-mobile;
+    margin-top: $nhsuk-vertical-spacing-mobile;
+  }
+}

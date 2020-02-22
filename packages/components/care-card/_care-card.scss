@@ -19,8 +19,7 @@
  */
 
 .nhsuk-care-card {
-  @include nhsuk-responsive-margin(7, 'bottom');
-  @include nhsuk-responsive-margin(7, 'top');
+  @include nhsuk-vertical-spacing;
   @include care-card($color_nhsuk-blue, $color_nhsuk-white, 4px); /* [1] */
   border: 1px solid transparent; /* [2] */
 }

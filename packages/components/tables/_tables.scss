@@ -46,10 +46,14 @@
  */
 
 .nhsuk-table-responsive {
-  @include nhsuk-responsive-margin(7, 'bottom');
 
   display: block; // sass-lint:disable-line property-sort-order
   -webkit-overflow-scrolling: touch; // sass-lint:disable-line property-sort-order
+  margin-bottom: $nhsuk-vertical-spacing-desktop;
+
+  @include mq($until: tablet) {
+    margin-bottom: $nhsuk-vertical-spacing-mobile;
+  }
   -ms-overflow-style: -ms-autohiding-scrollbar; // sass-lint:disable-line property-sort-order
   overflow-x: auto; // sass-lint:disable-line property-sort-order
   width: 100%;

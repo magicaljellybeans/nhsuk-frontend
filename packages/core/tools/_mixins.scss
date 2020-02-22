@@ -78,8 +78,7 @@
 @mixin panel($panel-background-color, $panel-text-color) {
 
   @include top-and-bottom();
-  @include nhsuk-responsive-margin(7, 'bottom');
-  @include nhsuk-responsive-margin(7, 'top');
+  @include nhsuk-vertical-spacing;
   @include nhsuk-responsive-padding(5);
 
   background-color: $panel-background-color;
@@ -104,6 +103,12 @@
 
 @mixin panel-with-label($panel-background-color, $panel-text-color) {
   @include panel($panel-background-color, $panel-text-color);
+
+  margin-top: $nhsuk-vertical-spacing-desktop + 16px;
+
+  @include mq($until: tablet) {
+    margin-top: $nhsuk-vertical-spacing-mobile + 8px;
+  }
 
   padding-top: 0 !important;  // sass-lint:disable-line no-important
 }

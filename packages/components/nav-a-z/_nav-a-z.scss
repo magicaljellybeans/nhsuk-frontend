@@ -12,9 +12,13 @@
  */
 
 .nhsuk-nav-a-z {
-  @include nhsuk-responsive-margin(7, 'top');
-  @include nhsuk-responsive-margin(7, 'bottom');
   @include print-hide();
+
+  margin-bottom: $nhsuk-vertical-spacing-desktop;
+
+  @include mq($until: tablet) {
+    margin-bottom: $nhsuk-vertical-spacing-mobile;
+  }
 }
 
 .nhsuk-nav-a-z__list {

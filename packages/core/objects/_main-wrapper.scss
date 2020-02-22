@@ -22,10 +22,15 @@
  */
 
 @mixin govuk-main-wrapper {
-  @include nhsuk-responsive-padding(7, 'top');
-  @include nhsuk-responsive-padding(7, 'bottom');
   @include top-and-bottom();
   display: block; /* [1] */
+  padding-bottom: $nhsuk-vertical-spacing-desktop;
+  padding-top: $nhsuk-vertical-spacing-desktop;
+
+  @include mq($until: tablet) {
+    padding-bottom: $nhsuk-vertical-spacing-mobile;
+  padding-top: $nhsuk-vertical-spacing-mobile;
+  }
 }
 
 @mixin govuk-main-wrapper--l {
