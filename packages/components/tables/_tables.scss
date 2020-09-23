@@ -113,7 +113,6 @@
 
       th {
         text-align: right;
-  
         @include mq($from: desktop) {
           text-align: left;
         }
