@@ -3,6 +3,27 @@
    COMPONENTS / #TABLE
    ========================================================================== */
 
+/**
+ * Table container is used to ensure the table does not break the container.
+ *
+ * 1. Margin is removed so there isn't double spacing.
+ */
+
+.nhsuk-table-container {
+  @include nhsuk-responsive-margin(7, 'bottom');
+
+  display: block; // sass-lint:disable-line property-sort-order
+  -webkit-overflow-scrolling: touch; // sass-lint:disable-line property-sort-order
+  -ms-overflow-style: -ms-autohiding-scrollbar; // sass-lint:disable-line property-sort-order
+  overflow-x: auto; // sass-lint:disable-line property-sort-order
+  width: 100%;
+
+  .nhsuk-table {
+    margin: 0; /* [1] */
+  }
+
+}
+
 /* Table row hover
 ========================================================================== */
 
@@ -40,37 +61,19 @@
 ========================================================================== */
 
 /**
- * Table container is used to ensure the table does not break the container.
- *
- * 1. Margin is removed so there isn't double spacing.
+ * 1. Hiding the thead on mobile
+ * 2. Displaying the thead on desktop
  */
-
-.nhsuk-table-container {
-  @include nhsuk-responsive-margin(7, 'bottom');
-
-  display: block; // sass-lint:disable-line property-sort-order
-  -webkit-overflow-scrolling: touch; // sass-lint:disable-line property-sort-order
-  -ms-overflow-style: -ms-autohiding-scrollbar; // sass-lint:disable-line property-sort-order
-  overflow-x: auto; // sass-lint:disable-line property-sort-order
-  width: 100%;
-
-  .nhsuk-table {
-    margin: 0; /* [1] */
-  }
-
-}
-
-$mobile: 768px;
 
 .nhsuk-table-responsive {
   margin-bottom: 0;
   width: 100%;
 
   thead {
-    @include visually-hidden;
+    @include visually-hidden; /* [1] */
 
-    @media (min-width: $mobile) {
-      @include visually-shown(table-header-group);
+    @include mq($from: desktop) {
+      @include visually-shown(table-header-group); /* [2] */
     }
   }
 
@@ -83,18 +86,19 @@ $mobile: 768px;
         margin-bottom: 0;
       }
 
-      @media (max-width: $mobile) {
+      @include mq($until: desktop) {
         padding: 0 .5em;
       }
 
-      @media (min-width: $mobile) {
+      @include mq($from: desktop) {
         display: table-row;
       }
 
       th {
         text-align: right;
 
-        @media (min-width: $mobile) {
+  
+        @include mq($from: desktop) {
           text-align: left;
         }
       }
@@ -105,12 +109,13 @@ $mobile: 768px;
         justify-content: space-between;
         min-width: 1px;
 
-        @media (min-width: $mobile) {
+        @include mq($from: desktop) {
           display: table-cell;
         }
 
-        @media (max-width: $mobile) {
+        @include mq($until: desktop) {
           padding-right: 0;
+          text-align: right;
           &:last-child {
             border-bottom: 3px solid $color_nhsuk-grey-4;
           }
@@ -125,7 +130,7 @@ $mobile: 768px;
   padding-right: 1em;
   text-align: left;
 
-  @media (min-width: $mobile) {
+  @include mq($from: desktop) {
     display: none;
   }
 }
@@ -150,3 +155,4 @@ $mobile: 768px;
 .nhsuk-table__cell--numeric {
   text-align: right;
 }
+
